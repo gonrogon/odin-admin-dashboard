@@ -2,6 +2,7 @@
 
 :root {
     font-family: "Roboto", sans-serif;
+    font-size: 16px;
 }
 
 * {
@@ -14,6 +15,10 @@ body {
     background-color: #202020;
 }
 
+ul, li {
+    list-style: none;
+}
+
 .container {
     min-height: 100vh;
     max-width: 1400px;
@@ -24,6 +29,46 @@ body {
 
 .sidebar {
     background-color: #3890d0;
+    color: #fff;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.sidebar h1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.sidebar li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.sidebar img {
+    filter: invert(1); /* Make black images white. */
+}
+
+.sidebar a {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
 }
 
 .main {
