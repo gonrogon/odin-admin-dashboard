@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #202020;
+}
+
+.container {
+    min-height: 100vh;
+    max-width: 1400px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: clamp(200px, 20%, 300px) auto;
+}
+
+.sidebar {
+    background-color: #3890d0;
+}
+
+.main {
+    background-color: #e2e7ef;
+    display: grid;
+    grid-template-rows: clamp(100px, 20%, 180px) auto;
+}
+
+.nav {
+    display: grid;
+    grid-template: 1fr 1fr / 2fr 1fr;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: minmax(400px, 8fr) 3fr;
+}
+
+.projects .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
