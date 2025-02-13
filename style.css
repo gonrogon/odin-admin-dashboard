@@ -197,6 +197,7 @@ ul, li {
     border-radius: var(--cards-radious);
     color: #555;
     overflow: hidden;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.20);
 }
 
 .projects .card > div {
@@ -245,6 +246,7 @@ ul, li {
     border-radius: var(--cards-radious);
     padding: 2rem;
     font-size: small;
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.20);
 }
 
 .announcements .cards {
