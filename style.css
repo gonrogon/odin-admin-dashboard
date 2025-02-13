@@ -2,6 +2,7 @@
 
 :root {
     --container-padding: 20px;
+    --cards-radious: 10px;
 
     font-family: "Roboto", sans-serif;
     font-size: 16px;
@@ -109,6 +110,7 @@ ul, li {
     border: 0;
     width: 20px;
     height: 20px;
+    cursor: pointer;
 }
 
 .nav input[type="text"] {
@@ -178,10 +180,9 @@ ul, li {
     padding: var(--container-padding);
 }
 
-.projects h2 {
+.projects h2, .news h2 {
     font-size: large;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin: 0.5rem 0;
 }
 
 .projects .cards {
@@ -193,7 +194,7 @@ ul, li {
 
 .projects .card {
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: var(--cards-radious);
     color: #555;
     overflow: hidden;
 }
@@ -225,4 +226,57 @@ ul, li {
 .projects .actions img {
     width: 24px;
     height: 24px;
+}
+
+.news {
+    color: #555;
+}
+
+.news h2, .news h3 {
+    color: #000;
+}
+
+.announcements {
+    margin-bottom: 1.5rem;
+}
+
+.announcements .cards, .trending ul {
+    background-color: #fff;
+    border-radius: var(--cards-radious);
+    padding: 2rem;
+    font-size: small;
+}
+
+.announcements .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.announcement:not(:last-child) {
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 14px;
+}
+
+.trending img {
+    width: 40px;
+    height: 40px;
+}
+
+.trending li {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.trending li:not(:last-child) {
+    margin-bottom: 1.4rem;
+}
+
+.trending a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
 }
