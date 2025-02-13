@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+    --container-padding: 20px;
+
     font-family: "Roboto", sans-serif;
     font-size: 16px;
 }
@@ -30,7 +32,7 @@ ul, li {
 .sidebar {
     background-color: #3890d0;
     color: #fff;
-    padding: 16px;
+    padding: var(--container-padding);
     display: flex;
     flex-direction: column;
     gap: 60px;
@@ -74,12 +76,99 @@ ul, li {
 .main {
     background-color: #e2e7ef;
     display: grid;
-    grid-template-rows: clamp(100px, 20%, 180px) auto;
+    grid-template-rows: min-content auto;
 }
 
 .nav {
     display: grid;
-    grid-template: 1fr 1fr / 2fr 1fr;
+    grid-template: 1fr 2fr / 3fr 2fr;
+    gap: 10px 40px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20);
+    padding: var(--container-padding) 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.nav .search {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.nav form {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.nav input[type="submit"] {
+    background-image: url("images/search.svg");
+    background-color: #ffff;
+    border: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.nav input[type="text"] {
+    flex-grow: 1;
+    background-color: #e2e7ef;
+    border: 0;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.nav .profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav .profile a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.nav .profile a:hover {
+    text-decoration: underline;
+}
+
+.nav .user {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+.nav .hello div:first-child {
+    font-size: x-small;
+}
+
+.nav .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+}
+
+.nav .menu a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3890d0;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: small;
+    width: 80px;
+    text-align: center;
+}
+
+.nav .menu a:hover {
+    background-color: #d05b38;
 }
 
 .content {
