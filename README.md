@@ -1,4 +1,4 @@
-# Odin Sign Up Form
+# Odin Admin Dashboard
 
 A practice project: Admin Dashboard
 
